@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="cover_depan_5" size="5.000000 6.539289" />
+    <ImageTarget name="cover_depan_30" size="30.000000 39.235737" />
+    <ImageTarget name="cover_depan_20" size="20.000000 26.157158" />
+    <ImageTarget name="cover_depan_10" size="10.000000 13.078579" />
+  </Tracking>
+</QCARConfig>

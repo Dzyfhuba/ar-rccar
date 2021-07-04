@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
-  <Tracking>
-    <ImageTarget name="cover_buku_depan" size="0.500000 0.653929" />
-    <ImageTarget name="cover_buku" size="0.500000 0.654014" />
-    <ImageTarget name="poster1" size="0.210000 0.148461" />
-  </Tracking>
-</QCARConfig>
