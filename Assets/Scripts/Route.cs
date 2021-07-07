@@ -5,6 +5,7 @@ using UnityEngine;
 public class Route : MonoBehaviour
 {
     // public int numberOfRoute = 1;
+    public GameObject player;
     public GameObject finish;
     public GameObject[] route;
     public int counter = 0;
@@ -13,7 +14,9 @@ public class Route : MonoBehaviour
     public GameObject[] routeHintNow;
     public GameObject[] routeHintNext;
     public GameObject routeHintFinish;
+    public GameObject UIController;
 
+    public GameObject finishScreen;
     string forCount;
 
     // Start is called before the first frame update
@@ -76,6 +79,12 @@ public class Route : MonoBehaviour
         if (counter == route.Length)
         {
             Debug.Log("Finish. yey!!");
+            player.GetComponent<VehicleControl>().activeControl = false;
+            finishScreen.active = true;
+            finishScreen.GetComponent<FinishScreenScript>().finishRace = true;
+            finishScreen.GetComponent<FinishScreenScript>().startRace = false;
+            finishScreen.GetComponent<FinishScreenScript>().FinishRace();
+            UIController.active = false;
         }
     }
 }
