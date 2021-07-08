@@ -11,10 +11,12 @@ public class CountdownController : MonoBehaviour
     public bool playCountdown;
     public VehicleControl vehicleControl;
     public FinishScreenScript finishScreenScript;
+    public RaceTimer raceTimer;
     public void startTheGame()
     {
         vehicleControl.activeControl = true;
-        finishScreenScript.startRace = true;
+        finishScreenScript.StartRace();
+        raceTimer.startTheTime();
     }
 
     public void playTheCountdown()

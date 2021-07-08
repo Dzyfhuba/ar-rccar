@@ -10,28 +10,32 @@ public class FinishScreenScript : MonoBehaviour // cukup sampai di sini wkwk
     public float currentRaceTime = 0f;
     public float raceDuration = 0f;
     public Text record;
+
+    public float timeStart = 0f;
+
+    public GameObject timer;
+
     // Start is called before the first frame update
     void Start()
     {
-        currentRaceTime = 0f;;
+        currentRaceTime = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startRace)
-        {
-            currentRaceTime += Time.deltaTime;
-        }
+        currentRaceTime = Time.time - timeStart;
+    }
+
+    public void StartRace()
+    {
+        timeStart = Time.time;
     }
 
     public void FinishRace()
     {
-        //if (finishRace)
-        //{
-        //    raceDuration = currentRaceTime;
-        //    record.text = "Speed Record: " + raceDuration;
-        //}
-        
+        raceDuration = Time.time - timeStart;
+        timer.GetComponentInChildren<Text>().text = timer.GetComponent<RaceTimer>().FloatToTime(raceDuration);
+        timer.GetComponent<RaceTimer>().isStart = false;
     }
 }
